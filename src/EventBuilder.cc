@@ -380,7 +380,7 @@ void MiniballEventBuilder::MakeEventHists(){
 
 	cd_pen_id.resize( set->GetNumberOfCDDetectors() );
 	cd_nen_id.resize( set->GetNumberOfCDDetectors() );
-	cd_pn_1v1_n_5.resize( set->GetNumberOfCDDetectors() );
+	cd_pn_1v1_p_6.resize( set->GetNumberOfCDDetectors() );
 	cd_pn_1v1.resize( set->GetNumberOfCDDetectors() );
 	cd_pn_1v2.resize( set->GetNumberOfCDDetectors() );
 	cd_pn_2v1.resize( set->GetNumberOfCDDetectors() );
@@ -397,7 +397,7 @@ void MiniballEventBuilder::MakeEventHists(){
 		
 		cd_pen_id[i].resize( set->GetNumberOfCDSectors() );
 		cd_nen_id[i].resize( set->GetNumberOfCDSectors() );
-		cd_pn_1v1_n_5[i].resize( set->GetNumberOfCDSectors() );
+		cd_pn_1v1_p_6[i].resize( set->GetNumberOfCDSectors() );
 		cd_pn_1v1[i].resize( set->GetNumberOfCDSectors() );
 		cd_pn_1v2[i].resize( set->GetNumberOfCDSectors() );
 		cd_pn_2v1[i].resize( set->GetNumberOfCDSectors() );
@@ -427,14 +427,14 @@ void MiniballEventBuilder::MakeEventHists(){
 									   set->GetNumberOfCDNStrips(), -0.5, set->GetNumberOfCDNStrips() - 0.5,
 									   4000, 0, 2000e3 );
 			
-			cd_pn_1v1_n_5[i][j].resize( set->GetNumberOfCDPStrips() );
+			cd_pn_1v1_p_6[i][j].resize( set->GetNumberOfCDPStrips() );
 			for( unsigned int h = 0; h < set->GetNumberOfCDPStrips(); ++h ) {
-				hname  = "cd_pn_1v1_n_5_" + std::to_string(i) + "_" + std::to_string(j) + "_" + std::to_string(h);
-				htitle  = "CD n- side (strip = 5) vs p-side (strip = " + std::to_string(h) + ") energy, multiplicity 1v1";
+				hname  = "cd_pn_1v1_p_6_" + std::to_string(i) + "_" + std::to_string(j) + "_" + std::to_string(h);
+				htitle  = "CD p- side (strip = 6) vs n-side (strip = " + std::to_string(h) + ") energy, multiplicity 1v1";
 				htitle += "for detector " + std::to_string(i);
 				htitle += ", sector " + std::to_string(j);
-				htitle += ";p-strip Channel ;n-strip Energy (keV);Counts";
-				cd_pn_1v1_n_5[i][j][h] = new TH2F( hname.data(), htitle.data(), 800, 1e5, 13e7, 4000, 0, 120e3 );
+				htitle += ";n-strip Channel ;p-strip Energy (keV);Counts";
+				cd_pn_1v1_p_6[i][j][h] = new TH2F( hname.data(), htitle.data(), 800, 1e5, 10e7, 4000, 0, 100e3 );
 
 			}
 
@@ -566,8 +566,8 @@ void MiniballEventBuilder::ResetHists(){
 		for( unsigned int j = 0; j < set->GetNumberOfCDSectors(); ++j ) {
 			cd_pen_id[i][j]->Reset( "ICEMS" );
 			cd_nen_id[i][j]->Reset( "ICEMS" );
-			for( unsigned int h = 0; h < set->GetNumberOfCDPStrips(); ++h ) {
-				cd_pn_1v1_n_5[i][j][h]->Reset( "ICEMS" );
+			for( unsigned int h = 0; h < set->GetNumberOfCDNStrips(); ++h ) {
+				cd_pn_1v1_p_6[i][j][h]->Reset( "ICEMS" );
 			}
 			cd_pn_1v1[i][j]->Reset( "ICEMS" );
 			cd_pn_1v2[i][j]->Reset( "ICEMS" );
@@ -926,10 +926,10 @@ void MiniballEventBuilder::ParticleFinder() {
 									  cd_en_list.at( nindex[0] ) );
 				cd_ppad_mult[i][i]->Fill( 1, padmult );
 
-				if( cd_strip_list.at( nindex[0] ) == 5 &&
-				    cd_strip_list.at( pindex[0] ) >= 0 &&
-				    cd_strip_list.at( pindex[0] ) < set->GetNumberOfCDPStrips() )
-					cd_pn_1v1_n_5[i][j][cd_strip_list.at(pindex[0])]->Fill( cd_en_list.at( pindex[0] ), cd_en_list.at( nindex[0] ) );
+				if( cd_strip_list.at( pindex[0] ) == 6 &&
+				    cd_strip_list.at( nindex[0] ) >= 0 &&
+				    cd_strip_list.at( nindex[0] ) < set->GetNumberOfCDNStrips() )
+					cd_pn_1v1_p_6[i][j][cd_strip_list.at(nindex[0])]->Fill( cd_en_list.at( nindex[0] ), cd_en_list.at( pindex[0] ) );
 
 			} // 1 vs 1
 			

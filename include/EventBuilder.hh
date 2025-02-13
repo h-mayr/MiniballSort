@@ -246,7 +246,7 @@ private:
 	std::vector<std::vector<TH2F*>> cd_pen_id, cd_nen_id;
 	std::vector<std::vector<TH1F*>> cd_pn_td, cd_pp_td, cd_nn_td;
 	std::vector<std::vector<TH2F*>> cd_pn_1v1, cd_pn_1v2, cd_pn_2v1, cd_pn_2v2;
-	std::vector<std::vector<std::vector<TH2F*>>> cd_pn_1v1_n_5;
+	std::vector<std::vector<std::vector<TH2F*>>> cd_pn_1v1_p_6;
 
 	// Pad histograms
 	std::vector<std::vector<TH2F*>> cd_ppad_mult;
