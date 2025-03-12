@@ -1619,7 +1619,7 @@ void MiniballHistogrammer::FillParticleGammaHists( std::shared_ptr<GammaRayEvt> 
 		gE_vs_theta_2p_dc_none->Fill( react->GetRecoil()->GetTheta() * TMath::RadToDeg(), g->GetEnergy(), weight );
 		gE_vs_theta_2p_dc_ejectile->Fill( react->GetRecoil()->GetTheta() * TMath::RadToDeg(), react->DopplerCorrection( g, true ), weight );
 		gE_vs_theta_2p_dc_recoil->Fill( react->GetRecoil()->GetTheta() * TMath::RadToDeg(), react->DopplerCorrection( g, false ), weight );
-		particle_theta_phi_kinematics->Fill( react->GetRecoil->GetParticlePhi() * TMath::RadToDeg() + react->GetEjectile->GetParticlePhi() * TMath::RadToDeg() - 180, react->GetRecoil->GetParticleTheta() * TMath::RadToDeg() + react->GetEjectile->GetParticleTheta() * TMath::RadToDeg() + 180, weight);
+		particle_theta_phi_kinematics->Fill( react->GetRecoil()->GetParticlePhi() * TMath::RadToDeg() + react->GetEjectile()->GetParticlePhi() * TMath::RadToDeg() - 180, react->GetRecoil()->GetParticleTheta() * TMath::RadToDeg() + react->GetEjectile()->GetParticleTheta() * TMath::RadToDeg() + 180, weight);
 		
 		// T1 impact time
 		if( react->HistByT1() ) {

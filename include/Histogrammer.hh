@@ -339,6 +339,7 @@ private:
 	TProfile *pBeta_theta_ejectile, *pBeta_theta_recoil;
 	TH1F *particle_particle_td;
 	TH2F *particle_xy_map_forward, *particle_xy_map_backward, *particle_theta_phi_map;
+	TH2F *particle_theta_phi_kinematics;
 
 	// Particle-gamma coincidences with and without addback
 	TH1F *gamma_particle_td;
