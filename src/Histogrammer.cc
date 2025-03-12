@@ -398,6 +398,10 @@ void MiniballHistogrammer::MakeHists() {
 	htitle = "Particle #theta-#phi hit map;#theta [deg];#phi [deg];Counts";
 	particle_theta_phi_map = new TH2F( hname.data(), htitle.data(), react->GetNumberOfParticleThetas(), react->GetParticleThetas().data(), 180, -181, 181 );
 	
+	hname = "particle_theta_phi_kinematics";
+	htitle = "Particle condition on kinematics; #phi (recoil) + #phi (ejectile) - 180 [deg]; #theta (recoil) + #theta (ejectile) + 180 [deg];Counts";
+	particle_theta_phi_kinematics = new TH2F(hname.data(), htitle.data(), react->GetNumberOfParticleThetas(), react->GetParticleThetas().data(), 180, -181, 181 );
+	
 	// Gamma-particle coincidences without addback
 	dirname = "GammaRayParticleCoincidences";
 	output_file->mkdir( dirname.data() );
@@ -1254,6 +1258,7 @@ void MiniballHistogrammer::ResetHists() {
 	particle_xy_map_forward->Reset("ICESM");
 	particle_xy_map_backward->Reset("ICESM");
 	particle_theta_phi_map->Reset("ICESM");
+	particle_theta_phi_kinematics->Reset("ICESM");
 	gE_prompt->Reset("ICESM");
 	gE_prompt_1p->Reset("ICESM");
 	gE_prompt_2p->Reset("ICESM");
@@ -1614,6 +1619,7 @@ void MiniballHistogrammer::FillParticleGammaHists( std::shared_ptr<GammaRayEvt> 
 		gE_vs_theta_2p_dc_none->Fill( react->GetRecoil()->GetTheta() * TMath::RadToDeg(), g->GetEnergy(), weight );
 		gE_vs_theta_2p_dc_ejectile->Fill( react->GetRecoil()->GetTheta() * TMath::RadToDeg(), react->DopplerCorrection( g, true ), weight );
 		gE_vs_theta_2p_dc_recoil->Fill( react->GetRecoil()->GetTheta() * TMath::RadToDeg(), react->DopplerCorrection( g, false ), weight );
+		particle_theta_phi_kinematics->Fill( react->GetRecoil->GetParticlePhi() * TMath::RadToDeg() + react->GetEjectile->GetParticlePhi() * TMath::RadToDeg() - 180, react->GetRecoil->GetParticleTheta() * TMath::RadToDeg() + react->GetEjectile->GetParticleTheta() * TMath::RadToDeg() + 180, weight);
 		
 		// T1 impact time
 		if( react->HistByT1() ) {
