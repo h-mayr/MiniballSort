@@ -427,8 +427,8 @@ void MiniballEventBuilder::MakeEventHists(){
 									   set->GetNumberOfCDNStrips(), -0.5, set->GetNumberOfCDNStrips() - 0.5,
 									   4000, 0, 2000e3 );
 			
-			cd_pn_1v1_p_13[i][j].resize( set->GetNumberOfCDPStrips() );
-			for( unsigned int h = 0; h < set->GetNumberOfCDPStrips(); ++h ) {
+			cd_pn_1v1_p_13[i][j].resize( set->GetNumberOfCDNStrips() );
+			for( unsigned int h = 0; h < set->GetNumberOfCDNStrips(); ++h ) {
 				hname  = "cd_pn_1v1_p_13_" + std::to_string(i) + "_" + std::to_string(j) + "_" + std::to_string(h);
 				htitle  = "CD p- side (strip = 13) vs n-side (strip = " + std::to_string(h) + ") energy, multiplicity 1v1";
 				htitle += "for detector " + std::to_string(i);
