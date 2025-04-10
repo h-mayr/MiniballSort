@@ -433,8 +433,8 @@ void MiniballEventBuilder::MakeEventHists(){
 				htitle  = "CD p- side (strip = 13) vs n-side (strip = " + std::to_string(h) + ") energy, multiplicity 1v1";
 				htitle += "for detector " + std::to_string(i);
 				htitle += ", sector " + std::to_string(j);
-				htitle += ";n-strip Channel ;p-strip Energy (keV);Counts";
-				cd_pn_1v1_p_13[i][j][h] = new TH2F( hname.data(), htitle.data(), 800, 1e5, 10e7, 4000, 0, 100e3 );
+				htitle += ";n-strip Channel ;p-strip Energy (MeV);Counts";
+				cd_pn_1v1_p_13[i][j][h] = new TH2F( hname.data(), htitle.data(), 1e7, 0, 1e9, 4000, 0, 1e3 );
 
 			}
 
