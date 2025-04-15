@@ -434,7 +434,7 @@ void MiniballEventBuilder::MakeEventHists(){
 				htitle += "for detector " + std::to_string(i);
 				htitle += ", sector " + std::to_string(j);
 				htitle += ";n-strip Channel ;p-strip Energy (MeV);Counts";
-				cd_pn_1v1_p_13[i][j][h] = new TH2F( hname.data(), htitle.data(), 1e7, 0, 1e9, 4000, 0, 1e3 );
+				cd_pn_1v1_p_13[i][j][h] = new TH2F( hname.data(), htitle.data(), 4500,0,1e9,4500,0,3e4 );
 
 			}
 
