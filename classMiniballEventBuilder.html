@@ -108,8 +108,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aac58527b4bfa9494690754b40ba5acb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4748c5244317f5ba48910a508884afb0" id="r_a4748c5244317f5ba48910a508884afb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4748c5244317f5ba48910a508884afb0">SetMBSInfoTree</a> (TTree *user_tree)</td></tr>
 <tr class="separator:a4748c5244317f5ba48910a508884afb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82e59f5d395cbac574d2d4f42f59c4f0" id="r_a82e59f5d395cbac574d2d4f42f59c4f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82e59f5d395cbac574d2d4f42f59c4f0">SetOutput</a> (std::string output_file_name)</td></tr>
-<tr class="separator:a82e59f5d395cbac574d2d4f42f59c4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec94599e254f1dcd866408ef83abe2cd" id="r_aec94599e254f1dcd866408ef83abe2cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec94599e254f1dcd866408ef83abe2cd">SetOutput</a> (std::string output_file_name, bool cWrite=false)</td></tr>
+<tr class="separator:aec94599e254f1dcd866408ef83abe2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28da2ff52ef0a47342eff02a779c2d35" id="r_a28da2ff52ef0a47342eff02a779c2d35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28da2ff52ef0a47342eff02a779c2d35">StartFile</a> ()</td></tr>
 <tr class="memdesc:a28da2ff52ef0a47342eff02a779c2d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">called for every file  <br /></td></tr>
 <tr class="separator:a28da2ff52ef0a47342eff02a779c2d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,6 +196,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ae0d74f80ed0809cdf5f1770d372de702"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00e10c276af1e03cfd5f9b430b8a3007" id="r_a00e10c276af1e03cfd5f9b430b8a3007"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; TGProgressBar &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00e10c276af1e03cfd5f9b430b8a3007">prog</a></td></tr>
 <tr class="separator:a00e10c276af1e03cfd5f9b430b8a3007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc9b35137f64335ce5db2fc2d1c6640f" id="r_adc9b35137f64335ce5db2fc2d1c6640f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc9b35137f64335ce5db2fc2d1c6640f">hists_ready</a> = false</td></tr>
+<tr class="separator:adc9b35137f64335ce5db2fc2d1c6640f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9214ca46daa51c183287d3cd772c447" id="r_aa9214ca46daa51c183287d3cd772c447"><td class="memItemLeft" align="right" valign="top">TList *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9214ca46daa51c183287d3cd772c447">histlist</a></td></tr>
+<tr class="separator:aa9214ca46daa51c183287d3cd772c447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf2c5083195f7dbb597fdb3573f479a5" id="r_adf2c5083195f7dbb597fdb3573f479a5"><td class="memItemLeft" align="right" valign="top">std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf2c5083195f7dbb597fdb3573f479a5">log_file</a></td></tr>
 <tr class="memdesc:adf2c5083195f7dbb597fdb3573f479a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log file for recording the results of the <a class="el" href="classMiniballEventBuilder.html">MiniballEventBuilder</a>.  <br /></td></tr>
 <tr class="separator:adf2c5083195f7dbb597fdb3573f479a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -518,7 +522,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00045">45</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00048">48</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2398b4e85a47bbb8d2710c34f4666271" name="a2398b4e85a47bbb8d2710c34f4666271"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2398b4e85a47bbb8d2710c34f4666271">&#9670;&#160;</a></span>MiniballEventBuilder()</h2>
@@ -562,7 +566,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00050">50</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00053">53</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
 </div>
 </div>
@@ -590,9 +594,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00061">61</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00064">64</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00533">do_build()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00713">MiniballGUI::gui_build()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00670">do_build()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00716">MiniballGUI::gui_build()</a>.</p>
 
 </div>
 </div>
@@ -619,9 +623,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00065">65</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00068">68</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MiniballGUI_8cc_source.html#l00713">MiniballGUI::gui_build()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MiniballGUI_8cc_source.html#l00716">MiniballGUI::gui_build()</a>.</p>
 
 </div>
 </div>
@@ -640,9 +644,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l01331">1331</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l01334">1334</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -662,9 +666,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Function to loop over the sort tree and build array and recoil events</p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l01448">1448</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l01451">1451</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00533">do_build()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00713">MiniballGUI::gui_build()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00670">do_build()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00716">MiniballGUI::gui_build()</a>.</p>
 
 </div>
 </div>
@@ -691,9 +695,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00081">81</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00084">84</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00533">do_build()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00713">MiniballGUI::gui_build()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00670">do_build()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00716">MiniballGUI::gui_build()</a>.</p>
 
 </div>
 </div>
@@ -712,9 +716,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00578">578</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00559">559</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -741,7 +745,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00079">79</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00082">82</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
 </div>
 </div>
@@ -768,7 +772,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00080">80</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00083">83</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
 </div>
 </div>
@@ -790,9 +794,9 @@ Private Attributes</h2></td></tr>
 <p>called for every event </p>
 <p>This is called at the end of every execution/loop</p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00222">222</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00231">231</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -811,9 +815,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l01367">1367</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l01370">1370</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -832,9 +836,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00298">298</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00277">277</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00193">SetOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00199">SetOutput()</a>.</p>
 
 </div>
 </div>
@@ -853,9 +857,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00740">740</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00741">741</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -884,9 +888,9 @@ Private Attributes</h2></td></tr>
 
 <p>Closes the output files from this class. </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00092">92</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00099">99</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8hh_source.html#l00081">CloseOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8hh_source.html#l00084">CloseOutput()</a>.</p>
 
 </div>
 </div>
@@ -905,7 +909,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00525">525</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00541">541</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
 </div>
 </div>
@@ -924,9 +928,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00149">149</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00155">155</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00533">do_build()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00713">MiniballGUI::gui_build()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00670">do_build()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00716">MiniballGUI::gui_build()</a>.</p>
 
 </div>
 </div>
@@ -945,9 +949,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00171">171</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00177">177</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00149">SetInputFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00155">SetInputFile()</a>.</p>
 
 </div>
 </div>
@@ -966,14 +970,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00182">182</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00188">188</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00149">SetInputFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00155">SetInputFile()</a>.</p>
 
 </div>
 </div>
-<a id="a82e59f5d395cbac574d2d4f42f59c4f0" name="a82e59f5d395cbac574d2d4f42f59c4f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82e59f5d395cbac574d2d4f42f59c4f0">&#9670;&#160;</a></span>SetOutput()</h2>
+<a id="aec94599e254f1dcd866408ef83abe2cd" name="aec94599e254f1dcd866408ef83abe2cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec94599e254f1dcd866408ef83abe2cd">&#9670;&#160;</a></span>SetOutput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -981,15 +985,19 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void MiniballEventBuilder::SetOutput </td>
           <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>output_file_name</em></span></td><td>)</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>output_file_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>cWrite</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00193">193</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00199">199</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00533">do_build()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00713">MiniballGUI::gui_build()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00670">do_build()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00716">MiniballGUI::gui_build()</a>.</p>
 
 </div>
 </div>
@@ -1008,9 +1016,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l01349">1349</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l01352">1352</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -1031,9 +1039,9 @@ Private Attributes</h2></td></tr>
 
 <p>called for every file </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00070">70</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8cc_source.html#l00076">76</a> of file <a class="el" href="EventBuilder_8cc_source.html">EventBuilder.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00149">SetInputFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00155">SetInputFile()</a>.</p>
 
 </div>
 </div>
@@ -1058,9 +1066,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00131">131</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00138">138</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8hh_source.html#l00065">AddProgressBar()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8hh_source.html#l00068">AddProgressBar()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>.</p>
 
 </div>
 </div>
@@ -1084,9 +1092,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00108">108</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00115">115</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -1110,9 +1118,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00221">221</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00234">234</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01331">BeamDumpFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01334">BeamDumpFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -1138,9 +1146,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of beam dump detector IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00207">207</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00220">220</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01331">BeamDumpFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01334">BeamDumpFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -1166,9 +1174,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of beam dump energies for BeamDumpFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00205">205</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00218">218</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01331">BeamDumpFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01334">BeamDumpFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -1192,9 +1200,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00120">120</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00127">127</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01331">BeamDumpFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00193">SetOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01334">BeamDumpFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00199">SetOutput()</a>.</p>
 
 </div>
 </div>
@@ -1220,9 +1228,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of beam dump timestamps for BeamDumpFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00206">206</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00219">219</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01331">BeamDumpFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01334">BeamDumpFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -1246,9 +1254,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00141">141</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00154">154</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>.</p>
 
 </div>
 </div>
@@ -1272,9 +1280,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00124">124</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00131">131</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8hh_source.html#l00061">AddCalibration()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8hh_source.html#l00064">AddCalibration()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -1298,9 +1306,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00221">221</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00234">234</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -1326,9 +1334,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of CD detector IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00192">192</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00205">205</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1354,9 +1362,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of CD energies for ParticleFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00190">190</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00203">203</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1380,9 +1388,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00245">245</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00258">258</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1406,9 +1414,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00246">246</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00259">259</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1432,9 +1440,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00245">245</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00258">258</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1458,9 +1466,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00247">247</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00260">260</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1484,9 +1492,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00247">247</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00260">260</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1510,9 +1518,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00247">247</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00260">260</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1536,9 +1544,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00247">247</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00260">260</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1562,9 +1570,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00244">244</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00257">257</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1588,9 +1596,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00246">246</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00259">259</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1614,9 +1622,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00246">246</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00259">259</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1640,9 +1648,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00250">250</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00263">263</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1666,9 +1674,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00251">251</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00264">264</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1694,9 +1702,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of CD sector IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00193">193</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00206">206</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1722,9 +1730,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of CD side IDs; 0 = p, 1 = n </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00194">194</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00207">207</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1750,9 +1758,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of CD strip IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00195">195</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00208">208</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1778,9 +1786,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of CD timestamps for ParticleFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00191">191</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00204">204</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -1804,9 +1812,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00107">107</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00114">114</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -1830,9 +1838,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00155">155</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00168">168</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -1856,9 +1864,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00234">234</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00247">247</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -1882,9 +1890,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00233">233</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00246">246</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -1908,9 +1916,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00151">151</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00164">164</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -1934,9 +1942,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00156">156</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00169">169</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -1960,9 +1968,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00151">151</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00164">164</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>.</p>
 
 </div>
 </div>
@@ -1986,9 +1994,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00146">146</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00159">159</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -2012,9 +2020,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00109">109</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00116">116</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -2038,9 +2046,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00160">160</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00173">173</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -2064,9 +2072,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00162">162</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00175">175</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>.</p>
 
 </div>
 </div>
@@ -2090,9 +2098,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00161">161</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00174">174</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -2116,9 +2124,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00161">161</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00174">174</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -2144,9 +2152,9 @@ Private Attributes</h2></td></tr>
 
 <p>length of build window in ns </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00144">144</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00157">157</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -2170,9 +2178,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00138">138</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00151">151</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00149">SetInputFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00155">SetInputFile()</a>.</p>
 
 </div>
 </div>
@@ -2196,9 +2204,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00145">145</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00158">158</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -2222,9 +2230,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00145">145</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00158">158</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -2248,9 +2256,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00221">221</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00234">234</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -2274,9 +2282,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00117">117</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00124">124</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00193">SetOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00199">SetOutput()</a>.</p>
 
 </div>
 </div>
@@ -2300,9 +2308,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00221">221</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00234">234</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -2326,9 +2334,61 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00116">116</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00123">123</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00193">SetOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00199">SetOutput()</a>.</p>
+
+</div>
+</div>
+<a id="aa9214ca46daa51c183287d3cd772c447" name="aa9214ca46daa51c183287d3cd772c447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9214ca46daa51c183287d3cd772c447">&#9670;&#160;</a></span>histlist</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TList* MiniballEventBuilder::histlist</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00145">145</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00541">ResetHists()</a>.</p>
+
+</div>
+</div>
+<a id="adc9b35137f64335ce5db2fc2d1c6640f" name="adc9b35137f64335ce5db2fc2d1c6640f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc9b35137f64335ce5db2fc2d1c6640f">&#9670;&#160;</a></span>hists_ready</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MiniballEventBuilder::hists_ready = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00142">142</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -2352,9 +2412,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00221">221</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00234">234</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -2378,9 +2438,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00221">221</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00234">234</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01367">IonChamberFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01370">IonChamberFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -2404,9 +2464,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00256">256</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00269">269</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01367">IonChamberFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01370">IonChamberFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -2430,9 +2490,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00255">255</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00268">268</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01367">IonChamberFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01370">IonChamberFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -2456,9 +2516,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00256">256</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00269">269</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01367">IonChamberFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01370">IonChamberFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -2484,9 +2544,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of IonChamber energies for IonChamberFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00215">215</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00228">228</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01367">IonChamberFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01370">IonChamberFinder()</a>.</p>
 
 </div>
 </div>
@@ -2510,9 +2570,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00121">121</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00128">128</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01367">IonChamberFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00193">SetOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01370">IonChamberFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00199">SetOutput()</a>.</p>
 
 </div>
 </div>
@@ -2538,9 +2598,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of IonChamber layer IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00217">217</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00230">230</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01367">IonChamberFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01370">IonChamberFinder()</a>.</p>
 
 </div>
 </div>
@@ -2564,9 +2624,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00257">257</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00270">270</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01367">IonChamberFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01370">IonChamberFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -2592,9 +2652,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of IonChamber timestamps for IonChamberFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00216">216</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00229">229</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01367">IonChamberFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01370">IonChamberFinder()</a>.</p>
 
 </div>
 </div>
@@ -2618,9 +2678,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00105">105</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00112">112</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00081">CloseOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00171">SetInputTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00084">CloseOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00177">SetInputTree()</a>.</p>
 
 </div>
 </div>
@@ -2644,9 +2704,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00110">110</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00117">117</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -2672,9 +2732,9 @@ Private Attributes</h2></td></tr>
 
 <p>Input tree. </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00102">102</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00109">109</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8hh_source.html#l00081">CloseOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00149">SetInputFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8hh_source.html#l00084">CloseOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00155">SetInputFile()</a>.</p>
 
 </div>
 </div>
@@ -2698,9 +2758,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00103">103</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00110">110</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00081">CloseOutput()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00092">PurgeOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00171">SetInputTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00084">CloseOutput()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00099">PurgeOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00177">SetInputTree()</a>.</p>
 
 </div>
 </div>
@@ -2724,9 +2784,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00154">154</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00167">167</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -2752,9 +2812,9 @@ Private Attributes</h2></td></tr>
 
 <p>Log file for recording the results of the <a class="el" href="classMiniballEventBuilder.html">MiniballEventBuilder</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00135">135</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00148">148</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00081">CloseOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00193">SetOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00084">CloseOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00199">SetOutput()</a>.</p>
 
 </div>
 </div>
@@ -2780,9 +2840,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of cluster IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00185">185</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00198">198</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -2808,9 +2868,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of crystal IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00186">186</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00199">199</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -2834,9 +2894,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00240">240</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00253">253</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -2860,9 +2920,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00241">241</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00254">254</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -2888,9 +2948,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of Miniball energies for GammaRayFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00183">183</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00196">196</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -2916,9 +2976,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of segment IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00187">187</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00200">200</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -2942,9 +3002,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00239">239</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00252">252</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -2968,9 +3028,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00238">238</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00251">251</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -2996,9 +3056,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of Miniball timestamps for GammaRayFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00184">184</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00197">197</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -3022,9 +3082,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00106">106</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00113">113</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00081">CloseOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00182">SetMBSInfoTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00084">CloseOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00188">SetMBSInfoTree()</a>.</p>
 
 </div>
 </div>
@@ -3048,9 +3108,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00104">104</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00111">111</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00081">CloseOutput()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00092">PurgeOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00182">SetMBSInfoTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00084">CloseOutput()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00099">PurgeOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00188">SetMBSInfoTree()</a>.</p>
 
 </div>
 </div>
@@ -3076,9 +3136,9 @@ Private Attributes</h2></td></tr>
 
 <p>ADC module number. </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00168">168</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00181">181</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3104,9 +3164,9 @@ Private Attributes</h2></td></tr>
 
 <p>febex board number </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00166">166</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00179">179</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3132,9 +3192,9 @@ Private Attributes</h2></td></tr>
 
 <p>channel number </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00169">169</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00182">182</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3160,9 +3220,9 @@ Private Attributes</h2></td></tr>
 
 <p>clipped flag? </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00178">178</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00191">191</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3188,9 +3248,9 @@ Private Attributes</h2></td></tr>
 
 <p>DGF module number. </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00167">167</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00180">180</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3216,9 +3276,9 @@ Private Attributes</h2></td></tr>
 
 <p>calibrated energy </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00175">175</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00188">188</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3244,9 +3304,9 @@ Private Attributes</h2></td></tr>
 
 <p><a class="el" href="classMBS.html">MBS</a> event id. </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00172">172</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00185">185</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3272,9 +3332,9 @@ Private Attributes</h2></td></tr>
 
 <p><a class="el" href="classMBS.html">MBS</a> event time. </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00174">174</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00187">187</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3300,9 +3360,9 @@ Private Attributes</h2></td></tr>
 
 <p>hit time with respect to event time </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00171">171</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00184">184</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3328,9 +3388,9 @@ Private Attributes</h2></td></tr>
 
 <p>laser pattern bit </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00179">179</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00192">192</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3356,9 +3416,9 @@ Private Attributes</h2></td></tr>
 
 <p>pileup flag? </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00177">177</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00190">190</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3384,9 +3444,9 @@ Private Attributes</h2></td></tr>
 
 <p>sfp number </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00165">165</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00178">178</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3412,9 +3472,9 @@ Private Attributes</h2></td></tr>
 
 <p>above threshold? </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00176">176</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00189">189</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3440,9 +3500,9 @@ Private Attributes</h2></td></tr>
 
 <p>absolute timestamp </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00170">170</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00183">183</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3466,9 +3526,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00224">224</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00237">237</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3492,9 +3552,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00222">222</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00235">235</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3518,9 +3578,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00227">227</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00240">240</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3544,9 +3604,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00225">225</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00238">238</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3570,9 +3630,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00227">227</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00240">240</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3596,9 +3656,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00224">224</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00237">237</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3622,9 +3682,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00222">222</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00235">235</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3648,9 +3708,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00223">223</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00236">236</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3674,9 +3734,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00222">222</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00235">235</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3700,9 +3760,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00222">222</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00235">235</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3726,9 +3786,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00227">227</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00240">240</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3752,9 +3812,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00222">222</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00235">235</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3778,9 +3838,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00222">222</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00235">235</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -3804,9 +3864,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00227">227</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00240">240</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3830,9 +3890,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00227">227</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00240">240</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3856,9 +3916,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00226">226</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00239">239</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3882,9 +3942,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00224">224</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00237">237</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3908,9 +3968,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00226">226</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00239">239</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3934,9 +3994,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00223">223</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00236">236</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3960,9 +4020,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00223">223</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00236">236</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3986,9 +4046,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00224">224</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00237">237</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -4012,9 +4072,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00227">227</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00240">240</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -4038,9 +4098,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00225">225</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00238">238</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -4064,9 +4124,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00223">223</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00236">236</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -4092,9 +4152,9 @@ Private Attributes</h2></td></tr>
 
 <p>Outputs. </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00113">113</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00120">120</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00081">CloseOutput()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00079">GetFile()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00092">PurgeOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00193">SetOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8hh_source.html#l00084">CloseOutput()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00082">GetFile()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00099">PurgeOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00199">SetOutput()</a>.</p>
 
 </div>
 </div>
@@ -4118,9 +4178,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00114">114</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00121">121</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00081">CloseOutput()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00080">GetTree()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00193">SetOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00084">CloseOutput()</a>, <a class="el" href="EventBuilder_8hh_source.html#l00083">GetTree()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00199">SetOutput()</a>.</p>
 
 </div>
 </div>
@@ -4144,9 +4204,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00125">125</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00132">132</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8hh_source.html#l00061">AddCalibration()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8hh_source.html#l00064">AddCalibration()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>.</p>
 
 </div>
 </div>
@@ -4172,9 +4232,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of PAD detector IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00200">200</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00213">213</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -4198,9 +4258,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00252">252</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00265">265</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -4226,9 +4286,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of PAD energies for ParticleFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00198">198</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00211">211</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -4254,9 +4314,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of PAD sector IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00201">201</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00214">214</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -4282,9 +4342,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of PAD timestamps for ParticleFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00199">199</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00212">212</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>.</p>
 
 </div>
 </div>
@@ -4308,9 +4368,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00118">118</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00125">125</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00193">SetOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00199">SetOutput()</a>.</p>
 
 </div>
 </div>
@@ -4334,9 +4394,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00158">158</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00171">171</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -4362,9 +4422,9 @@ Private Attributes</h2></td></tr>
 
 <p>previous <a class="el" href="classMBS.html">MBS</a> event id </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00173">173</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00186">186</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>.</p>
 
 </div>
 </div>
@@ -4388,9 +4448,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00132">132</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00139">139</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8hh_source.html#l00065">AddProgressBar()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8hh_source.html#l00068">AddProgressBar()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -4414,9 +4474,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00155">155</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00168">168</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -4440,9 +4500,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00234">234</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00247">247</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -4466,9 +4526,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00233">233</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00246">246</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -4492,9 +4552,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00157">157</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00170">170</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -4518,9 +4578,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00156">156</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00169">169</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -4544,9 +4604,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00235">235</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00248">248</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -4570,9 +4630,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00157">157</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00170">170</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -4596,9 +4656,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00228">228</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00241">241</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -4622,9 +4682,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00158">158</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00171">171</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -4648,9 +4708,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00155">155</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00168">168</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -4674,9 +4734,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00234">234</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00247">247</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -4700,9 +4760,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00233">233</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00246">246</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -4726,9 +4786,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00153">153</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00166">166</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -4752,9 +4812,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00156">156</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00169">169</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -4778,9 +4838,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00153">153</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00166">166</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -4804,9 +4864,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00128">128</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00135">135</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01367">IonChamberFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01370">IonChamberFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -4830,9 +4890,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00221">221</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00234">234</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01349">SpedeFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01352">SpedeFinder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -4858,9 +4918,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of Spede energies for ElectronFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00210">210</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00223">223</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01349">SpedeFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01352">SpedeFinder()</a>.</p>
 
 </div>
 </div>
@@ -4884,9 +4944,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00119">119</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00126">126</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00193">SetOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01349">SpedeFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l00199">SetOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01352">SpedeFinder()</a>.</p>
 
 </div>
 </div>
@@ -4912,9 +4972,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of Spede segment IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00212">212</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00225">225</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01349">SpedeFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01352">SpedeFinder()</a>.</p>
 
 </div>
 </div>
@@ -4940,9 +5000,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of Spede timestamps for ElectronFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00211">211</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00224">224</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01349">SpedeFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01352">SpedeFinder()</a>.</p>
 
 </div>
 </div>
@@ -4966,9 +5026,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00159">159</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00172">172</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00003">MiniballEventBuilder()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -4992,9 +5052,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00155">155</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00168">168</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -5018,9 +5078,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00234">234</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00247">247</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -5044,9 +5104,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00233">233</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00246">246</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -5070,9 +5130,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00152">152</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00165">165</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -5096,9 +5156,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00156">156</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00169">169</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -5122,9 +5182,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00152">152</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00165">165</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -5148,9 +5208,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00232">232</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00245">245</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -5174,9 +5234,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00232">232</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00245">245</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00298">MakeEventHists()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00525">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00277">MakeEventHists()</a>.</p>
 
 </div>
 </div>
@@ -5200,9 +5260,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00149">149</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00162">162</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>.</p>
 
 </div>
 </div>
@@ -5226,9 +5286,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00150">150</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00163">163</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -5252,9 +5312,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00150">150</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00163">163</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -5278,9 +5338,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00150">150</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00163">163</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -5304,9 +5364,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00150">150</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00163">163</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00070">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l00076">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -5330,9 +5390,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00115">115</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EventBuilder_8hh_source.html#l00122">122</a> of file <a class="el" href="EventBuilder_8hh_source.html">EventBuilder.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01331">BeamDumpFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01448">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00578">GammaRayFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00222">Initialise()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01367">IonChamberFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00740">ParticleFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00193">SetOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01349">SpedeFinder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventBuilder_8cc_source.html#l01334">BeamDumpFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01451">BuildEvents()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00559">GammaRayFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00231">Initialise()</a>, <a class="el" href="EventBuilder_8cc_source.html#l01370">IonChamberFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00741">ParticleFinder()</a>, <a class="el" href="EventBuilder_8cc_source.html#l00199">SetOutput()</a>, and <a class="el" href="EventBuilder_8cc_source.html#l01352">SpedeFinder()</a>.</p>
 
 </div>
 </div>
